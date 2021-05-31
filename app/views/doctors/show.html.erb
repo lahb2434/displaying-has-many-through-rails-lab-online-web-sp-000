@@ -1,0 +1,6 @@
+<%= @doctor.name %><br>
+
+<% @doctor.appointments.each do |appt| %>
+    <%= link_to appt.appt_patient, patient_path(appt.patient) %>
+    <%= appt.formatted_appt %><br>
+<%end%>
